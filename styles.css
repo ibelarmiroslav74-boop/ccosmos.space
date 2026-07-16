@@ -258,13 +258,14 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    flex: 1;
 }
 
 /* Подвал сайта */
 .site-footer {
     background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding: 50px 20px;
+    padding: 40px 20px;
     margin-top: auto;
     text-align: center;
 }
@@ -274,20 +275,36 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.footer-content p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    margin: 8px 0;
-    letter-spacing: 0.5px;
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(0, 255, 255, 0.35), 0 0 36px rgba(138, 43, 226, 0.28);
+    margin-bottom: 12px;
+    transition: transform 0.3s;
 }
 
-.footer-content strong {
-    background: linear-gradient(45deg, #fff, var(--accent-glow));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    letter-spacing: 1px;
-    font-family: 'Orbitron', sans-serif;
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.footer-logo svg {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
 }
 
 @media (max-width: 768px) {
@@ -353,12 +370,22 @@ nav a:hover {
     .article-container {
         grid-template-columns: 1fr;
     }
+    
     .hero h1 {
         font-size: 2.5rem;
     }
 
     .footer-content p {
         font-size: 0.85rem;
+    }
+
+    .footer-logo {
+        font-size: 14px;
+    }
+
+    .footer-logo svg {
+        width: 16px;
+        height: 16px;
     }
 }
 
