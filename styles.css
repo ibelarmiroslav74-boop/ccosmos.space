@@ -22,6 +22,9 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Шапка сайта (Навигация) */
@@ -121,6 +124,7 @@ nav a:hover {
     text-align: center;
     padding: clamp(48px, 10vh, 96px) 24px 24px;
     background: #000000;
+    flex: 1;
 }
 
 /* Звёздное небо */
@@ -189,8 +193,12 @@ nav a:hover {
 
 .hero-cta {
     margin-top: 28px;
-    border: 1px solid rgba(0, 255, 255, 0.35);
-    box-shadow: 0 0 24px rgba(138, 43, 226, 0.25);
+    border: none;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.6), 0 0 60px rgba(138, 43, 226, 0.3);
+}
+
+.hero-cta:hover {
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.8), 0 0 80px rgba(138, 43, 226, 0.5);
 }
 
 .btn {
@@ -250,6 +258,36 @@ nav a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+}
+
+/* Подвал сайта */
+.site-footer {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 50px 20px;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.footer-content strong {
+    background: linear-gradient(45deg, #fff, var(--accent-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Orbitron', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -318,6 +356,10 @@ nav a:hover {
     .hero h1 {
         font-size: 2.5rem;
     }
+
+    .footer-content p {
+        font-size: 0.85rem;
+    }
 }
 
 .canvas-container {
@@ -328,13 +370,4 @@ nav a:hover {
     overflow: hidden;
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Подвал */
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    color: var(--text-muted);
-    font-size: 0.9rem;
 }
