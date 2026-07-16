@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Марс: Всё о Красной планете в 3D - CCosmos</title>
-    <meta name="description" content="Узнайте подробные характеристики Марса. Полноценная 3D модель планеты с возможностью вращения и приближения.">
+    <meta name="description" content="Узнайте подробные характеристики Марса. Полноценная 3D модель планеты с возможностью в…">
     <link rel="stylesheet" href="styles.css">
     
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
@@ -46,7 +46,7 @@
             <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 20px; color: #ff6347;">Марс</h1>
             
             <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
-                <strong>Марс</strong> — четвертая по удаленности от Солнца и седьмая по размеру планета Солнечной системы. Свое название она получила в честь древнеримского бога войны из-за своего красноватого оттенка, вызванного большим количеством оксида железа в грунте.
+                <strong>Марс</strong> — четвертая по удаленности от Солнца и седьмая по размеру планета Солнечной системы…
             </p>
 
             <h3 style="margin-bottom: 10px; color: var(--accent-glow);">Ключевые факты:</h3>
@@ -58,15 +58,13 @@
             </ul>
 
             <p style="color: var(--text-muted);">
-                Вы можете использовать мышь на компьютере или пальцы на смартфоне, чтобы покрутить и изучить 3D модель слева.
+                Вы можете использовать мышь на компьютере или пальцы на смартфоне, чтобы покрутить и изучить 3D модель…
             </p>
         </div>
 
     </div>
 
-    <footer>
-        <p>&copy; 2026 CCosmos.space</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script>
         const header = document.querySelector('header');
@@ -76,6 +74,12 @@
             const isOpen = header.classList.toggle('menu-open');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').outerHTML = html;
+            });
     </script>
 
 </body>
