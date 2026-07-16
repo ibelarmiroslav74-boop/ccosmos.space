@@ -1,5 +1,6 @@
 /* Базовые настройки и шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
 /* Подключение загруженного шрифта Colossus Expanded RUS */
 @font-face {
     font-family: 'Colossus Expanded RUS';
@@ -7,14 +8,6 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
-
-/* Применение шрифта к заголовку "Космос близко" внутри секции hero */
-.hero h1 {
-    font-family: 'Colossus Expanded RUS', Arial, sans-serif;
-    font-size: 3.5rem; /* Вы можете настроить размер под ваш дизайн */
-    letter-spacing: 1px; /* Межбуквенный интервал для лучшей читаемости */
-    margin-bottom: 15px;
 }
 
 :root {
@@ -86,7 +79,6 @@ header {
     height: 64px;
 }
 
-
 .menu-toggle {
     display: none;
     width: 44px;
@@ -150,7 +142,7 @@ nav a:hover {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image: 
+    background-image: 
         /* Яркие звёзды (1px) */
         radial-gradient(1px 1px at 15% 20%, white, transparent),
         radial-gradient(1px 1px at 85% 15%, white, transparent),
@@ -168,7 +160,7 @@ nav a:hover {
         radial-gradient(0.8px 0.8px at 20% 50%, rgba(255, 255, 255, 0.8), transparent),
         radial-gradient(0.8px 0.8px at 45% 15%, rgba(255, 255, 255, 0.85), transparent),
         radial-gradient(0.8px 0.8px at 80% 40%, rgba(255, 255, 255, 0.75), transparent),
-        radial-gradient(0.8px 0.8px at 35% 85%, rgba(255, 255, 255, 0.8), transparent),
+        radial-gradient(0.8px 0.8px at 35% 85%, rgba(255, 255, 255, 0.85), transparent),
         radial-gradient(0.8px 0.8px at 65% 75%, rgba(255, 255, 255, 0.9), transparent),
         /* Маленькие звёзды (0.5px) */
         radial-gradient(0.5px 0.5px at 12% 35%, rgba(255, 255, 255, 0.6), transparent),
@@ -191,10 +183,12 @@ nav a:hover {
     z-index: 1;
 }
 
+/* Главный заголовок с новым шрифтом Colossus */
 .hero h1 {
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Colossus Expanded RUS', 'Orbitron', sans-serif;
     font-size: clamp(2.75rem, 7vw, 6rem);
     margin-bottom: 12px;
+    letter-spacing: 1px;
     text-shadow: 0 0 28px rgba(0, 255, 255, 0.25);
     background: linear-gradient(45deg, #fff, var(--accent-glow));
     -webkit-background-clip: text;
@@ -386,7 +380,7 @@ nav a:hover {
     .article-container {
         grid-template-columns: 1fr;
     }
-    
+    
     .hero h1 {
         font-size: 2.5rem;
     }
