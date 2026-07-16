@@ -18,7 +18,12 @@
             </svg>
             <span>CCOSMOS</span>
         </a>
-        <nav>
+        <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav id="main-nav">
             <a href="encyclopedia.html" style="color: var(--accent-glow);">Энциклопедия</a>
         </nav>
     </header>
@@ -44,6 +49,16 @@
     <footer>
         <p>&copy; 2026 CCosmos.space</p>
     </footer>
+
+    <script>
+        const header = document.querySelector('header');
+        const menuToggle = document.querySelector('.menu-toggle');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = header.classList.toggle('menu-open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+    </script>
 
 </body>
 </html>
