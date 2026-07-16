@@ -255,6 +255,14 @@ nav a:hover {
         background: rgba(255, 255, 255, 0.04);
     }
 
+    .hero {
+        padding-top: 12px;
+    }
+
+    .hero-logo {
+        margin-bottom: clamp(36px, 10vh, 72px);
+    }
+
     .article-container {
         grid-template-columns: 1fr;
     }
