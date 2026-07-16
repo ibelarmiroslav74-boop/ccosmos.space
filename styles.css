@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: #050711;
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
@@ -59,7 +59,7 @@ header {
     justify-content: center;
     margin-bottom: clamp(48px, 13vh, 120px);
     font-size: 32px;
-    text-shadow: 0 0 18px rgba(0, 255, 255, 0.35);
+    text-shadow: 0 0 18px rgba(0, 255, 255, 0.35), 0 0 36px rgba(138, 43, 226, 0.28);
 }
 
 .hero-logo svg {
@@ -110,6 +110,9 @@ nav a:hover {
 
 /* Главный блок (Hero Section) */
 .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -118,22 +121,79 @@ nav a:hover {
     text-align: center;
     padding: clamp(48px, 10vh, 96px) 24px 24px;
     background:
-        radial-gradient(circle at 50% 0%, rgba(0, 255, 255, 0.16), transparent 36%),
-        radial-gradient(circle at 50% 42%, rgba(138, 43, 226, 0.18), transparent 34%),
-        var(--bg-color);
+        radial-gradient(circle at 18% 18%, rgba(0, 255, 255, 0.22), transparent 28%),
+        radial-gradient(circle at 78% 28%, rgba(138, 43, 226, 0.26), transparent 34%),
+        radial-gradient(circle at 50% 78%, rgba(30, 64, 175, 0.24), transparent 42%),
+        linear-gradient(180deg, #050711 0%, #09091a 48%, #02030a 100%);
+}
+
+.hero::before,
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero::before {
+    background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.96) 0 1px, transparent 1.8px),
+        radial-gradient(circle, rgba(0, 255, 255, 0.85) 0 1.2px, transparent 2.2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.72) 0 1px, transparent 2px),
+        radial-gradient(circle at 35% 20%, rgba(255, 255, 255, 0.9), transparent 1.5px),
+        radial-gradient(circle at 70% 65%, rgba(170, 118, 255, 0.95), transparent 1.8px);
+    background-position: 0 0, 38px 72px, 112px 34px, 0 0, 0 0;
+    background-size: 140px 140px, 220px 220px, 310px 310px, 260px 260px, 360px 360px;
+    opacity: 0.78;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.45));
+    animation: star-twinkle 8s ease-in-out infinite alternate;
+}
+
+.hero::after {
+    z-index: 0;
+    background:
+        radial-gradient(ellipse at center, transparent 0 38%, rgba(2, 3, 10, 0.12) 58%, rgba(2, 3, 10, 0.76) 100%),
+        linear-gradient(115deg, transparent 0 57%, rgba(255, 255, 255, 0.78) 58%, rgba(0, 255, 255, 0.3) 58.35%, transparent 61%),
+        linear-gradient(115deg, transparent 0 18%, rgba(255, 255, 255, 0.42) 18.6%, rgba(138, 43, 226, 0.2) 18.95%, transparent 22%);
+    opacity: 0.9;
+}
+
+@keyframes star-twinkle {
+    from {
+        opacity: 0.58;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0.9;
+        transform: scale(1.025);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero::before {
+        animation: none;
+    }
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
     font-family: 'Orbitron', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.75rem, 7vw, 6rem);
     margin-bottom: 12px;
+    text-shadow: 0 0 28px rgba(0, 255, 255, 0.25);
     background: linear-gradient(45deg, #fff, var(--accent-glow));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .hero p {
-    font-size: 1.05rem;
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
     color: var(--text-muted);
     max-width: 420px;
 }
