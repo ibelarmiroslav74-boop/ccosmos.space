@@ -1,0 +1,16 @@
+<footer class="site-footer">
+    <div class="footer-content">
+        <a href="index.html" class="logo footer-logo" aria-label="CCOSMOS — главная страница">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="25" fill="none" stroke="#00ffff" stroke-width="4" />
+                <ellipse cx="50" cy="50" rx="45" ry="10" fill="none" stroke="#8a2be2" stroke-width="3" transform="rotate(-25 50 50)" />
+                <circle cx="50" cy="50" r="15" fill="#fff" />
+            </svg>
+            <span>CCOSMOS</span>
+        </a>
+        <p>&copy; <span id="year"></span> — Все права защищены</p>
+    </div>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
