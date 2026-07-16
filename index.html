@@ -23,15 +23,7 @@
         <a href="encyclopedia.html" class="btn hero-cta">Перейти в энциклопедию</a>
     </section>
 
-    <div id="footer-placeholder"></div>
-
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').outerHTML = html;
-            });
-    </script>
+    <script src="footer.js"></script>
 
 </body>
 </html>
