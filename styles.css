@@ -1,5 +1,21 @@
 /* Базовые настройки и шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+/* Подключение загруженного шрифта Colossus Expanded RUS */
+@font-face {
+    font-family: 'Colossus Expanded RUS';
+    src: url('ColossusExpandedRUS.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Применение шрифта к заголовку "Космос близко" внутри секции hero */
+.hero h1 {
+    font-family: 'Colossus Expanded RUS', Arial, sans-serif;
+    font-size: 3.5rem; /* Вы можете настроить размер под ваш дизайн */
+    letter-spacing: 1px; /* Межбуквенный интервал для лучшей читаемости */
+    margin-bottom: 15px;
+}
 
 :root {
     --bg-color: #0b0b14;
