@@ -43,12 +43,10 @@
                 <p>Наш родной дом. Единственная известная планета во Вселенной, на которой есть жизнь.</p>
             </a>
 
-            </div>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2026 CCosmos.space</p>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script>
         const header = document.querySelector('header');
@@ -58,8 +56,13 @@
             const isOpen = header.classList.toggle('menu-open');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer-placeholder').outerHTML = html;
+            });
     </script>
 
 </body>
 </html>
-
