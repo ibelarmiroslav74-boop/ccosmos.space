@@ -57,8 +57,9 @@ header {
 
 .hero-logo {
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(48px, 13vh, 120px);
     font-size: 32px;
+    text-shadow: 0 0 18px rgba(0, 255, 255, 0.35);
 }
 
 .hero-logo svg {
@@ -112,11 +113,14 @@ nav a:hover {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    padding: 24px;
-    background: var(--bg-color);
+    padding: clamp(48px, 10vh, 96px) 24px 24px;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(0, 255, 255, 0.16), transparent 36%),
+        radial-gradient(circle at 50% 42%, rgba(138, 43, 226, 0.18), transparent 34%),
+        var(--bg-color);
 }
 
 .hero h1 {
@@ -132,6 +136,12 @@ nav a:hover {
     font-size: 1.05rem;
     color: var(--text-muted);
     max-width: 420px;
+}
+
+.hero-cta {
+    margin-top: 28px;
+    border: 1px solid rgba(0, 255, 255, 0.35);
+    box-shadow: 0 0 24px rgba(138, 43, 226, 0.25);
 }
 
 .btn {
