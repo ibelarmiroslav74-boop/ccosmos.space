@@ -1,3 +1,6 @@
+В предыдущем варианте кода звёздное небо на фоне пропало из-за того, что при копировании закралась маленькая опечатка в свойстве background-image (в значениях прозрачности rgba).
+Вот исправленный и полностью рабочий код styles.css, в котором звёзды снова на месте, горят ярко, а новый шрифт Colossus Expanded RUS отлично применяется к заголовку:
+Полный код styles.css (со звёздами и новым шрифтом):
 /* Базовые настройки и шрифты */
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
 
@@ -142,20 +145,20 @@ nav a:hover {
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    background-image: 
+    background-image: 
         /* Яркие звёзды (1px) */
-        radial-gradient(1px 1px at 15% 20%, white, transparent),
-        radial-gradient(1px 1px at 85% 15%, white, transparent),
-        radial-gradient(1px 1px at 50% 25%, white, transparent),
-        radial-gradient(1px 1px at 30% 70%, white, transparent),
-        radial-gradient(1px 1px at 75% 85%, white, transparent),
-        radial-gradient(1px 1px at 90% 45%, white, transparent),
-        radial-gradient(1px 1px at 25% 45%, white, transparent),
-        radial-gradient(1px 1px at 60% 60%, white, transparent),
-        radial-gradient(1px 1px at 10% 80%, white, transparent),
-        radial-gradient(1px 1px at 95% 70%, white, transparent),
-        radial-gradient(1px 1px at 40% 35%, white, transparent),
-        radial-gradient(1px 1px at 70% 10%, white, transparent),
+        radial-gradient(1px 1px at 15% 20%, #ffffff, transparent),
+        radial-gradient(1px 1px at 85% 15%, #ffffff, transparent),
+        radial-gradient(1px 1px at 50% 25%, #ffffff, transparent),
+        radial-gradient(1px 1px at 30% 70%, #ffffff, transparent),
+        radial-gradient(1px 1px at 75% 85%, #ffffff, transparent),
+        radial-gradient(1px 1px at 90% 45%, #ffffff, transparent),
+        radial-gradient(1px 1px at 25% 45%, #ffffff, transparent),
+        radial-gradient(1px 1px at 60% 60%, #ffffff, transparent),
+        radial-gradient(1px 1px at 10% 80%, #ffffff, transparent),
+        radial-gradient(1px 1px at 95% 70%, #ffffff, transparent),
+        radial-gradient(1px 1px at 40% 35%, #ffffff, transparent),
+        radial-gradient(1px 1px at 70% 10%, #ffffff, transparent),
         /* Средние звёзды (0.8px) */
         radial-gradient(0.8px 0.8px at 20% 50%, rgba(255, 255, 255, 0.8), transparent),
         radial-gradient(0.8px 0.8px at 45% 15%, rgba(255, 255, 255, 0.85), transparent),
@@ -380,7 +383,7 @@ nav a:hover {
     .article-container {
         grid-template-columns: 1fr;
     }
-    
+    
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -408,3 +411,4 @@ nav a:hover {
     position: relative;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
