@@ -1,4 +1,5 @@
 function loadFooter() {
+    const currentYear = new Date().getFullYear();
     const footerHTML = `
         <footer class="site-footer">
             <div class="footer-content">
@@ -10,13 +11,12 @@ function loadFooter() {
                     </svg>
                     <span>CCOSMOS</span>
                 </a>
-                <p>&copy; <span id="year"></span> — Все права защищены</p>
+                <p>&copy; ${currentYear} — Все права защищены</p>
             </div>
         </footer>
     `;
     
     document.body.insertAdjacentHTML('beforeend', footerHTML);
-    document.getElementById('year').textContent = new Date().getFullYear();
 }
 
 document.addEventListener('DOMContentLoaded', loadFooter);
