@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCosmos - Интерактивная 3D энциклопедия космоса</title>
-    <meta name="description" content="Исследуйте Вселенную на ccosmos.space. 3D-модели планет, интерактивные карты галактик и проверенные научные факты.">
+    <meta name="description" content="Исследуйте Вселенную на ccosmos.space. 3D-модели планет, интерактивные карты галактик и прове…">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -23,6 +23,16 @@
         <a href="encyclopedia.html" class="btn hero-cta">Перейти в энциклопедию</a>
     </section>
 
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> <strong>CCosmos</strong></p>
+            <p>Все права защищены</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
-
