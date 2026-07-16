@@ -46,8 +46,6 @@
         </div>
     </main>
 
-    <div id="footer-placeholder"></div>
-
     <script>
         const header = document.querySelector('header');
         const menuToggle = document.querySelector('.menu-toggle');
@@ -56,13 +54,9 @@
             const isOpen = header.classList.toggle('menu-open');
             menuToggle.setAttribute('aria-expanded', String(isOpen));
         });
-
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById('footer-placeholder').outerHTML = html;
-            });
     </script>
+
+    <script src="footer.js"></script>
 
 </body>
 </html>
