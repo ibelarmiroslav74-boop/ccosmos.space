@@ -38,10 +38,6 @@ header {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.home-header {
-    justify-content: center;
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -57,6 +53,17 @@ header {
 .logo svg {
     width: 40px;
     height: 40px;
+}
+
+.hero-logo {
+    justify-content: center;
+    margin-bottom: 28px;
+    font-size: 32px;
+}
+
+.hero-logo svg {
+    width: 64px;
+    height: 64px;
 }
 
 
