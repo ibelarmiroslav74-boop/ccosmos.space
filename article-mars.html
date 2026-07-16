@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марс: Всё о Красной планете в 3D - CCosmos</title>
+    <meta name="description" content="Узнайте подробные характеристики Марса. Полноценная 3D модель планеты с возможностью вращения и приближения.">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="25" fill="none" stroke="#00ffff" stroke-width="4" />
+                <ellipse cx="50" cy="50" rx="45" ry="10" fill="none" stroke="#8a2be2" stroke-width="3" transform="rotate(-25 50 50)" />
+                <circle cx="50" cy="50" r="15" fill="#fff" />
+            </svg>
+            <span>CCOSMOS</span>
+        </a>
+        <nav>
+            <a href="encyclopedia.html">Назад в Энциклопедию</a>
+        </nav>
+    </header>
+
+    <div class="article-container">
+        
+        <div class="canvas-container">
+            <model-viewer 
+                src="https://modelviewer.dev/shared-assets/models/glTF-Sample-Assets/Models/Mars/glTF/Mars.gltf" 
+                alt="3D модель Марса" 
+                auto-rotate 
+                camera-controls 
+                style="width: 100%; height: 100%; background: transparent;">
+            </model-viewer>
+        </div>
+
+        <div class="article-content">
+            <h1 style="font-family: 'Orbitron', sans-serif; font-size: 3rem; margin-bottom: 20px; color: #ff6347;">Марс</h1>
+            
+            <p style="margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8;">
+                <strong>Марс</strong> — четвертая по удаленности от Солнца и седьмая по размеру планета Солнечной системы. Свое название она получила в честь древнеримского бога войны из-за своего красноватого оттенка, вызванного большим количеством оксида железа в грунте.
+            </p>
+
+            <h3 style="margin-bottom: 10px; color: var(--accent-glow);">Ключевые факты:</h3>
+            <ul style="list-style-position: inside; margin-bottom: 20px; color: var(--text-muted);">
+                <li><strong>Расстояние от Солнца:</strong> около 227.9 млн км</li>
+                <li><strong>Период обращения:</strong> 687 земных суток</li>
+                <li><strong>Атмосфера:</strong> Очень тонкая (95% углекислого газа)</li>
+                <li><strong>Спутники:</strong> Фобос и Деймос</li>
+            </ul>
+
+            <p style="color: var(--text-muted);">
+                Вы можете использовать мышь на компьютере или пальцы на смартфоне, чтобы покрутить и изучить 3D модель слева.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CCosmos.space</p>
+    </footer>
+
+</body>
+</html>
